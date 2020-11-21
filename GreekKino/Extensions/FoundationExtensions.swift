@@ -16,6 +16,11 @@ extension Date {
         dateFormatterToTime.dateFormat = "HH:mm"
         return dateFormatterToTime.string(from: self)
     }
+    func convertToTimeWithSecondsString() -> String {
+        let dateFormatterToTime = DateFormatter()
+        dateFormatterToTime.dateFormat = "HH:mm:ss"
+        return dateFormatterToTime.string(from: self)
+    }
 }
 extension Date {
     func currentTimeMillis() -> Int {

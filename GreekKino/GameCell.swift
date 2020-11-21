@@ -10,24 +10,29 @@ import Foundation
 import UIKit
 
 class GameCell: UITableViewCell {
-    var gameTimer: Timer?
+    var gameTimer: Timer!
     
     var counter = Date().currentTimeMillis()
+    
     
     @IBOutlet var gameTimeLabel: UILabel!
     @IBOutlet var remainingTime: UILabel!
     
     func configureUI(item: GameModel) {
-        createTimer()
         gameTimeLabel.text = Date(timeIntervalSince1970: TimeInterval(item.drawTime)).convertToTimeString()
-        remainingTime.text = Date(timeIntervalSince1970: TimeInterval(counter - item.drawTime)).convertToTimeString()
+        remainingTime.text = Date(timeIntervalSince1970: TimeInterval(counter - item.drawTime)).convertToTimeWithSecondsString()
+        createTimer()
     }
     func createTimer() {
-        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
         
     }
     @objc func update() {
-        
-        
+        if counter > 0 {
+            remainingTime.text = Date(timeIntervalSince1970: TimeInterval(counter)).convertToTimeWithSecondsString()
+            counter = counter - 1
+        } else if counter == 0 {
+            gameTimer.invalidate()
+        }
     }
 }

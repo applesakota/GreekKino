@@ -50,12 +50,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate {
         }
         return item
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
-    }
+
     
     
 }

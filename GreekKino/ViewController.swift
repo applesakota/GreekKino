@@ -37,11 +37,9 @@ class ViewController: UIViewController {
         configureTableView()
     }
 
-
     func configureTableView() {
         gameTableView.delegate = self
         gameTableView.dataSource = self
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameScreen" {
@@ -66,9 +64,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configureUI(item: gameModel[indexPath.row])
         return cell
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
 
 }
 

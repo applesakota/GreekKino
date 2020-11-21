@@ -57,7 +57,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="vDV-XW-LAs" secondAttribute="bottom" constant="11.5" id="IA2-VY-jee"/>
                                         <constraint firstItem="vDV-XW-LAs" firstAttribute="leading" secondItem="jQj-yK-otK" secondAttribute="leading" constant="8" id="VSh-b4-NLv"/>
@@ -208,11 +208,11 @@
             </objects>
             <point key="canvasLocation" x="-459" y="338"/>
         </scene>
-        <!--Item 1-->
+        <!--Games-->
         <scene sceneID="9GZ-vw-JP0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wrR-KT-GVm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="GDs-aV-X1G"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="square.grid.2x2" catalog="system" id="GDs-aV-X1G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1qw-oN-ndD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -227,11 +227,11 @@
             </objects>
             <point key="canvasLocation" x="457.97101449275368" y="12.723214285714285"/>
         </scene>
-        <!--Item 2-->
+        <!--Live -->
         <scene sceneID="iwn-Jo-Y4C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DdO-l6-Npi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="IBh-UH-7VE"/>
+                    <tabBarItem key="tabBarItem" title="Live " image="livephoto" catalog="system" id="IBh-UH-7VE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DGI-xJ-jDH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -247,4 +247,8 @@
             <point key="canvasLocation" x="457.97101449275368" y="661.60714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="livephoto" catalog="system" width="64" height="60"/>
+        <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

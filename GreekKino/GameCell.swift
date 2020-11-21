@@ -22,6 +22,10 @@ class GameCell: UITableViewCell {
         gameTimeLabel.text = Date(timeIntervalSince1970: TimeInterval(item.drawTime)).convertToTimeString()
         remainingTime.text = Date(timeIntervalSince1970: TimeInterval(counter - item.drawTime)).convertToTimeWithSecondsString()
         createTimer()
+        self.layer.cornerRadius = 5
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
     func createTimer() {
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)

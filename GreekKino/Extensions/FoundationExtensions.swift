@@ -10,7 +10,6 @@ import Foundation
 
 
 //MARK: Date
-//test
 extension Date {
     func convertToTimeString () -> String {
         let dateFormatterToTime = DateFormatter()

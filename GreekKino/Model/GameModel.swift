@@ -26,24 +26,20 @@ struct GameModel: Codable {
         case drawTime, status, drawBreak, visualDraw, pricePoints, prizeCategories, wagerStatistics
     }
 }
-
 // MARK: - PricePoints
 struct PricePoints: Codable {
     let addOn: [AddOn]
     let amount: Double
 }
-
 // MARK: - AddOn
 struct AddOn: Codable {
     let amount: Double
     let gameType: AddOnGameType
 }
-
 enum AddOnGameType: String, Codable {
     case kinoBonus = "KinoBonus"
     case sideBets = "SideBets"
 }
-
 // MARK: - PrizeCategory
 struct PrizeCategory: Codable {
     let id, divident, winners, distributed: Int
@@ -52,13 +48,11 @@ struct PrizeCategory: Codable {
     let categoryType: Int
     let gameType: PrizeCategoryGameType
 }
-
 // MARK: - WagerStatistics
 struct WagerStatistics: Codable {
     let columns, wagers: Int
     let addOn: [AddOn]
 }
-
 enum PrizeCategoryGameType: String, Codable {
     case column = "Column"
     case draw = "Draw"
@@ -66,7 +60,6 @@ enum PrizeCategoryGameType: String, Codable {
     case kinoBonus = "KinoBonus"
     case oddEven = "OddEven"
 }
-
 enum Status: String, Codable {
     case active = "active"
     case future = "future"

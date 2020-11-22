@@ -134,10 +134,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LO6-c8-NEn">
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LO6-c8-NEn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDJ-D6-biz">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDJ-D6-biz">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -147,11 +147,11 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="CollectionViewItemCell" id="nDC-Cg-r2q" customClass="CollectionViewItem" customModule="GreekKino" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yTQ-jo-IH7" customClass="CollectionViewItem" customModule="GreekKino" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yTQ-jo-IH7" customClass="CollectionViewItem" customModule="GreekKino" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vr-8Y-s5b">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-kF-5kD">
                                                     <rect key="frame" x="4" y="14.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -159,13 +159,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3Vr-8Y-s5b" firstAttribute="centerX" secondItem="yTQ-jo-IH7" secondAttribute="centerX" id="0cm-7y-wtB"/>
-                                                <constraint firstItem="3Vr-8Y-s5b" firstAttribute="centerY" secondItem="yTQ-jo-IH7" secondAttribute="centerY" id="Fma-pz-Dma"/>
+                                                <constraint firstItem="DUA-kF-5kD" firstAttribute="centerX" secondItem="yTQ-jo-IH7" secondAttribute="centerX" id="M5b-29-WB8"/>
+                                                <constraint firstItem="DUA-kF-5kD" firstAttribute="centerY" secondItem="yTQ-jo-IH7" secondAttribute="centerY" id="P8x-vb-BiM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="collectionViewItemCellLabel" destination="3Vr-8Y-s5b" id="Iya-Tn-7V9"/>
+                                            <outlet property="collectionViewItemCellLabel" destination="DUA-kF-5kD" id="jhD-uQ-xlb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

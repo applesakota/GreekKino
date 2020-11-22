@@ -78,14 +78,14 @@
 				EBA032D92565E955004438B4 /* Model */,
 				EBA032D62565E06C004438B4 /* Services */,
 				EBA032C22565E057004438B4 /* AppDelegate.swift */,
-				EBA032C42565E057004438B4 /* SceneDelegate.swift */,
+				EB11DFFE256949A0007EAF8C /* GameViewController.swift */,
 				EBA032C62565E057004438B4 /* ViewController.swift */,
+				EBA0330625688F45004438B4 /* WebExtractionViewController.swift */,
+				EBA032C42565E057004438B4 /* SceneDelegate.swift */,
 				EBA032C82565E057004438B4 /* Main.storyboard */,
 				EBA032CB2565E05B004438B4 /* Assets.xcassets */,
 				EBA032CD2565E05B004438B4 /* LaunchScreen.storyboard */,
 				EBA032D02565E05B004438B4 /* Info.plist */,
-				EBA0330625688F45004438B4 /* WebExtractionViewController.swift */,
-				EB11DFFE256949A0007EAF8C /* GameViewController.swift */,
 			);
 			path = GreekKino;
 			sourceTree = "<group>";

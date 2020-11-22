@@ -13,7 +13,7 @@ class CollectionViewItem: UICollectionViewCell {
     
     @IBOutlet weak var collectionViewItemCellLabel: UILabel!
     
-
+    
 
     
 }

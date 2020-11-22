@@ -20,8 +20,6 @@ class GameViewController: UIViewController {
             trackNumbersLabel.text = "Brojeva: \(countNumbers)"
         }
     }
-    
-    
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var trackNumbersLabel: UILabel!
@@ -33,6 +31,7 @@ class GameViewController: UIViewController {
         setNavigationUI()
         
     }
+//MARK: UI
     func setNavigationUI() {
         if let gamePlay = gameToPlay {
             navItem.title = "Vreme izvlacenja \(Date(timeIntervalSince1970: TimeInterval(gamePlay.drawTime)).convertToTimeString()) | Kolo \(gamePlay.drawID)"
@@ -40,8 +39,9 @@ class GameViewController: UIViewController {
         trackNumbersLabel.text = "Brojeva: \(countNumbers)"
     }
     
-    //MARK: - Actions
+//MARK: - Actions
     @IBAction func selectRandomNumbersButton(_ sender: Any) {
+        alert()
         let upperBound: Int = 8
         let selectRandomNumbers = makeRandomNumbersSellection(upperBound)
         sellectedNumbers = []
@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
     func makeRandomNumbersSellection(_ upperBound: Int) -> [Int] {
         return (1...upperBound).map{_ in Int.random(in: 1...80)}
     }
-    
+//MARK: - UIAlertController
     func alert() {
         if countNumbers == 0 {
             let alertController = UIAlertController(title: "You selected 8 numbers of 80", message: "Is that your final choice?", preferredStyle: .alert)
@@ -75,9 +75,8 @@ class GameViewController: UIViewController {
         sellectedNumbers = []
         self.collectionView.reloadData()
     }
-
-    
 }
+//MARK: - Collection View DataSource and Delegate Methods
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -106,10 +105,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             collectionView.reloadData()
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 80
     }
-
-    
 }

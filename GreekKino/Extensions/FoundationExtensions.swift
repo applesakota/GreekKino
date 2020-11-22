@@ -21,10 +21,8 @@ extension Date {
         dateFormatterToTime.dateFormat = "HH:mm:ss"
         return dateFormatterToTime.string(from: self)
     }
-}
-extension Date {
     func currentTimeMillis() -> Int {
-        return Int(self.timeIntervalSince1970 * 1000)
-    }
+           return Int(self.timeIntervalSince1970 * 1000)
+       }
 }
 

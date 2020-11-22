@@ -24,6 +24,7 @@ class WebExtractionViewController: UIViewController {
 
     }
 }
+//MARK: - WKNAvigationDelegate
 extension WebExtractionViewController: WKNavigationDelegate {
     func loadWebView() {
         let url = URL(string: "https://ds.opap.gr/web_kino/kinoIframe.html?link=https://ds.opap.gr/web_kino/kino/html/Internet_PRODUCTION/KinoDraw_201910.html&resolution=847x500")

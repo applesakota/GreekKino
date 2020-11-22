@@ -23,7 +23,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,11 +35,12 @@ class ViewController: UIViewController {
         }
         configureTableView()
     }
-
+//MARK: - UI
     func configureTableView() {
         gameTableView.delegate = self
         gameTableView.dataSource = self
     }
+//MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameScreen" {
             if let gameViewController = segue.destination as? GameViewController {
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         }
     }
 }
-
+//MARK: -TableView DataSource and Delegate Methods
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameModel.count

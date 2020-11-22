@@ -24,5 +24,9 @@ extension Date {
     func currentTimeMillis() -> Int {
            return Int(self.timeIntervalSince1970 * 1000)
        }
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+    
 }
 

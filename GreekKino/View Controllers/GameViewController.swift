@@ -73,7 +73,9 @@ class GameViewController: UIViewController {
     func resetPressed() {
         countNumbers = 8
         sellectedNumbers = []
+        collectionView.allowsSelection = true
         self.collectionView.reloadData()
+        
     }
 }
 //MARK: - Collection View DataSource and Delegate Methods

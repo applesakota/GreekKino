@@ -53,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB11E00F256B0A8C007EAF8C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB11DFFE256949A0007EAF8C /* GameViewController.swift */,
+				EBA0330625688F45004438B4 /* WebExtractionViewController.swift */,
+				EBA032C62565E057004438B4 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EB11E010256B0AAC007EAF8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBA032C42565E057004438B4 /* SceneDelegate.swift */,
+				EBA032C22565E057004438B4 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EBA032B62565E057004438B4 = {
 			isa = PBXGroup;
 			children = (
@@ -72,16 +91,13 @@
 		EBA032C12565E057004438B4 /* GreekKino */ = {
 			isa = PBXGroup;
 			children = (
+				EB11E010256B0AAC007EAF8C /* Supporting Files */,
+				EB11E00F256B0A8C007EAF8C /* View Controllers */,
 				EBA032E225686B2D004438B4 /* Constants */,
 				EBA032DF25682E6A004438B4 /* Extensions */,
 				EBA032DC2566D91A004438B4 /* Views */,
 				EBA032D92565E955004438B4 /* Model */,
 				EBA032D62565E06C004438B4 /* Services */,
-				EBA032C22565E057004438B4 /* AppDelegate.swift */,
-				EB11DFFE256949A0007EAF8C /* GameViewController.swift */,
-				EBA032C62565E057004438B4 /* ViewController.swift */,
-				EBA0330625688F45004438B4 /* WebExtractionViewController.swift */,
-				EBA032C42565E057004438B4 /* SceneDelegate.swift */,
 				EBA032C82565E057004438B4 /* Main.storyboard */,
 				EBA032CB2565E05B004438B4 /* Assets.xcassets */,
 				EBA032CD2565E05B004438B4 /* LaunchScreen.storyboard */,

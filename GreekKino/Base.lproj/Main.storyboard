@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LO6-c8-NEn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="525"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDJ-D6-biz">
                                     <size key="itemSize" width="50" height="50"/>
@@ -170,13 +170,33 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgF-hB-2Vj">
+                                <rect key="frame" x="37" y="735" width="104" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Slucajni Odabir">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectRandomNumbersButton:" destination="WzH-cf-RcG" eventType="touchUpInside" id="zYE-1l-UMR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVD-nk-Bth">
+                                <rect key="frame" x="335" y="744" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cgF-hB-2Vj" firstAttribute="leading" secondItem="Epg-zq-KYC" secondAttribute="leading" constant="37" id="7Ab-RB-7ys"/>
+                            <constraint firstItem="Epg-zq-KYC" firstAttribute="bottom" secondItem="cgF-hB-2Vj" secondAttribute="bottom" constant="48" id="DP7-eS-S8c"/>
+                            <constraint firstItem="Epg-zq-KYC" firstAttribute="trailing" secondItem="bVD-nk-Bth" secondAttribute="trailing" constant="37" id="GTe-Co-Yta"/>
                             <constraint firstItem="LO6-c8-NEn" firstAttribute="top" secondItem="Epg-zq-KYC" secondAttribute="top" id="Ny5-Ai-dRD"/>
+                            <constraint firstItem="cgF-hB-2Vj" firstAttribute="top" secondItem="LO6-c8-NEn" secondAttribute="bottom" constant="122" id="XUh-R2-vn4"/>
                             <constraint firstItem="LO6-c8-NEn" firstAttribute="trailing" secondItem="Epg-zq-KYC" secondAttribute="trailing" id="eDj-gZ-2Og"/>
-                            <constraint firstItem="Epg-zq-KYC" firstAttribute="bottom" secondItem="LO6-c8-NEn" secondAttribute="bottom" constant="55" id="jgu-u6-Vjr"/>
                             <constraint firstItem="LO6-c8-NEn" firstAttribute="leading" secondItem="Epg-zq-KYC" secondAttribute="leading" id="qSd-Tf-0ht"/>
+                            <constraint firstItem="Epg-zq-KYC" firstAttribute="bottom" secondItem="bVD-nk-Bth" secondAttribute="bottom" constant="48" id="qn6-DX-LqO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Epg-zq-KYC"/>
                     </view>
@@ -184,6 +204,7 @@
                     <connections>
                         <outlet property="collectionView" destination="LO6-c8-NEn" id="cIq-CA-gLC"/>
                         <outlet property="navItem" destination="u3b-IG-nC4" id="J13-QZ-L2R"/>
+                        <outlet property="trackNumbersLabel" destination="bVD-nk-Bth" id="esX-Jz-Vfp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djb-Ju-lb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

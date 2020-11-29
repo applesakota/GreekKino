@@ -85,9 +85,9 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewItemCell", for: indexPath) as? CollectionViewItem else { fatalError("cannot load item")}
         item.collectionViewItemCellLabel.text = String(indexPath.row + 1)
         if sellectedNumbers.contains(indexPath.item) {
-            item.backgroundColor = UIColor.blue
+            item.isSelected = true
         } else {
-            item.backgroundColor = UIColor.lightGray
+            item.isSelected = false
         }
         return item
         

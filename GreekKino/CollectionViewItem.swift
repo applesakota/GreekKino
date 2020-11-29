@@ -13,7 +13,13 @@ class CollectionViewItem: UICollectionViewCell {
     
     @IBOutlet weak var collectionViewItemCellLabel: UILabel!
     
-    
+    override var isSelected: Bool {
+        willSet {
+            if newValue && selectedBackgroundView == nil {
+                selectedBackgroundView = CircleWhenIsSelected()
+            }
+        }
+    }
 
     
 }
